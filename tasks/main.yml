@@ -1,0 +1,12 @@
+---
+# We need to force nullmailer to timeout on sending mails or it will try forever
+# in case of permanent errors.
+# See https://github.com/bruceg/nullmailer/issues/1
+- name: Configure cron for forcing timeouts on sending mails.
+  cron:
+    cron_file: nullmailer
+    user: root
+    name: nullmailer_force_timeout
+    job: "find /var/spool/nullmailer/queue -type f -mmin +{{ nullmailer_force_timeout_min }} -delete"
+    minute: "*/{{ nullmailer_force_timeout_check_min }}"
+    state: present
