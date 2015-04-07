@@ -1,5 +1,5 @@
 ##drunomics.nullmailer##
-Ansible role that extends [knopki.nullmailer](https://github.com/knopki/ansible-nullmailer) for installingnullmailer with 
+Ansible role that extends [knopki.nullmailer](https://github.com/knopki/ansible-nullmailer) for installing nullmailer with 
 some custom configuration.
 
 
