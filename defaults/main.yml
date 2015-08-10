@@ -5,4 +5,5 @@
 nullmailer_force_timeout_min: 120
 # How often in minutes the check should be pursuit
 nullmailer_force_timeout_check_min: 20
-nullmailer_remotes: 127.0.0.1 smtp --port=1025
+nullmailer_remotes:
+ - 127.0.0.1 smtp --port=1025
